@@ -2,6 +2,13 @@ const express = require("express");
 const router = express.Router();
 const Product = require("../model/Product");
 
+router.get("/check", (req, res) => {
+  // console.log(req.seller.id);
+  res.send({
+    status: "success"
+  })
+});
+
 router.get("/product", (req, res) => {
   // console.log(req.seller.id);
   Product.find().then((productData) => {
