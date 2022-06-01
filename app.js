@@ -9,4 +9,6 @@ server.use(morgan('dev'));
 
 server.use('/api/', productRoute)
 
-module.exports = server
+server.listen(3000, () => {
+    console.log("server running")
+})
